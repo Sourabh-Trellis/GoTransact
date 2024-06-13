@@ -4,6 +4,7 @@ import (
 	accountmodels "GoTransact/apps/accounts/models"
 	basemodels "GoTransact/apps/base"
 	transactionmodels "GoTransact/apps/transaction/models"
+	"GoTransact/apps/transaction/utils"
 	"GoTransact/apps/transaction/validators"
 	"GoTransact/pkg/db"
 	"fmt"
@@ -112,6 +113,8 @@ func PaymentRequest(c *gin.Context) {
 		})
 		return
 	}
+
+	go utils.SendMail(user,TransactionRequest)
 
 	c.JSON(http.StatusOK, basemodels.Response{
 		Status:  http.StatusOK,
