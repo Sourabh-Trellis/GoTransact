@@ -3,21 +3,35 @@ package utils
 import (
 	accountmodels "GoTransact/apps/accounts/models"
 	transactionmodels "GoTransact/apps/transaction/models"
+	log "GoTransact/settings"
 	"bytes"
 	"crypto/tls"
 	"fmt"
 	"html/template"
-	"log"
+	"net/url"
+	"time"
 
+	"github.com/google/uuid"
+	"github.com/sirupsen/logrus"
 	gomail "gopkg.in/mail.v2"
 )
 
 type TemplateData struct {
-	Username string
-	Amount   float64
+	Username     string
+	TrasactionID uuid.UUID
+	Amount       float64
+	ConfirmURL   string
+	CancelURL    string
+	DateTime     time.Time
 }
 
 func SendMail(user accountmodels.User, request transactionmodels.TransactionRequest) {
+
+	log.InfoLogger.WithFields(logrus.Fields{
+		"email": user.Email,
+		"id":    user.Internal_id,
+	}).Info("Attempted to send confirm payment mail")
+
 	fmt.Println("start of mail")
 	m := gomail.NewMessage()
 
@@ -26,28 +40,43 @@ func SendMail(user accountmodels.User, request transactionmodels.TransactionRequ
 
 	// Set E-Mail receivers
 	// m.SetHeader("To", user.Email)
-	m.SetHeader("To", "sourabhsd87@gmail.com")
+	m.SetHeader("To", user.Email)
 
 	// Set E-Mail subject
-	m.SetHeader("Subject", "Payment Initated")
+	m.SetHeader("Subject", "Payment Confirmation Required")
 
 	// Parse the HTML template
 	tmpl, err := template.ParseFiles("/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/email_template.html")
 	if err != nil {
-		log.Fatal("Error parsing email template: ", err)
+		fmt.Printf("Error parsing email template: %s", err)
 	}
 
 	// Create a buffer to hold the executed template
 	var body bytes.Buffer
 
+	baseURL := "http://localhost:8080/protected/api/confirm-payment" // Replace with your actual domain and endpoint
+	params := url.Values{}
+	params.Add("transaction_id", request.Internal_id.String())
+	params.Add("status", "true")
+	ConfirmActionURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
+
+	baseURL = "http://localhost:8080/protected/api/confirm-payment" // Replace with your actual domain and endpoint
+	params = url.Values{}
+	params.Add("transaction_id", request.Internal_id.String())
+	params.Add("status", "false")
+	CancelActionURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
+
 	// Execute the template with the data
 	TemplateData := TemplateData{
-		Username: user.FirstName,
-		Amount:   request.Amount,
+		Username:     user.FirstName,
+		TrasactionID: request.Internal_id,
+		Amount:       request.Amount,
+		ConfirmURL:   ConfirmActionURL,
+		CancelURL:    CancelActionURL,
 	}
 	fmt.Println(TemplateData)
 	if err := tmpl.Execute(&body, TemplateData); err != nil {
-		log.Fatal("Error executing email template: ", err)
+		fmt.Printf("Error executing email template: %s", err)
 	}
 
 	fmt.Println()
@@ -63,8 +92,14 @@ func SendMail(user accountmodels.User, request transactionmodels.TransactionRequ
 
 	// Now send E-Mail
 	if err := d.DialAndSend(m); err != nil {
-		fmt.Println(err)
+		log.ErrorLogger.WithFields(logrus.Fields{
+			"error": err.Error(),
+			"email": user.Email,
+		}).Error("Error sending confirm payment mail")
 		panic(err)
 	}
-	fmt.Println("end of mail")
+	log.InfoLogger.WithFields(logrus.Fields{
+		"email": user.Email,
+		"id":    user.Internal_id,
+	}).Info("comfirmation mail sent")
 }

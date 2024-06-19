@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-playground/validator/v10"
+	"github.com/go-playground/validator"
 )
 
 var validate *validator.Validate

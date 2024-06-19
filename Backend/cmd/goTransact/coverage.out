@@ -1,0 +1,15 @@
+mode: set
+GoTransact/apps/accounts/test/testDB_setup.go:11.20,14.77 3 1
+GoTransact/apps/accounts/test/testDB_setup.go:14.77,16.3 1 0
+GoTransact/apps/accounts/test/testDB_setup.go:19.20,22.16 3 1
+GoTransact/apps/accounts/test/testDB_setup.go:22.16,25.3 2 0
+GoTransact/apps/accounts/test/testDB_setup.go:26.2,26.38 1 1
+GoTransact/apps/accounts/test/testDB_setup.go:26.38,28.3 1 0
+GoTransact/apps/accounts/test/testDB_setup.go:31.22,38.2 3 1
+GoTransact/apps/transaction/test/testDB_setup.go:11.20,14.194 3 1
+GoTransact/apps/transaction/test/testDB_setup.go:14.194,16.3 1 0
+GoTransact/apps/transaction/test/testDB_setup.go:19.20,22.16 3 1
+GoTransact/apps/transaction/test/testDB_setup.go:22.16,25.3 2 0
+GoTransact/apps/transaction/test/testDB_setup.go:26.2,26.38 1 1
+GoTransact/apps/transaction/test/testDB_setup.go:26.38,28.3 1 0
+GoTransact/apps/transaction/test/testDB_setup.go:31.22,42.2 6 1

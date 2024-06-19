@@ -2,16 +2,21 @@ package utils
 
 import (
 	"GoTransact/apps/accounts/models"
+	"context"
+	"fmt"
 	"time"
 
 	"aidanwoods.dev/go-paseto"
-	// "github.com/aead/chacha20poly1305"
-	// "github.com/o1egl/paseto"
+	"github.com/go-redis/redis/v8"
 )
 
 var (
 	secretKey = paseto.NewV4AsymmetricSecretKey() // don't share this!!!
 	publicKey = secretKey.Public()                // DO share this one
+	ctx       = context.Background()
+	rdb       = redis.NewClient(&redis.Options{
+		Addr: "localhost:6379", // Redis server address
+	})
 )
 
 func CreateToken(user models.User) (string, error) {
@@ -30,6 +35,11 @@ func CreateToken(user models.User) (string, error) {
 }
 
 func VerifyToken(signedToken string) (any, error) {
+
+	val, err := rdb.Get(ctx, signedToken).Result()
+	if err == nil && val == "Blacklisted" {
+		return nil, fmt.Errorf("token has been revoked")
+	}
 
 	parser := paseto.NewParser()
 	parser.AddRule(paseto.NotExpired())

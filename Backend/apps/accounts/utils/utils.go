@@ -1,9 +1,11 @@
 package utils
 
 import (
+	log "GoTransact/settings"
 	"crypto/tls"
 	"fmt"
 
+	"github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
 	gomail "gopkg.in/mail.v2"
 )
@@ -14,6 +16,9 @@ func HashPassword(password string) (string, error) {
 }
 
 func SendMail(to string) {
+
+	log.InfoLogger.WithFields(logrus.Fields{}).Info("Attempted to send mail on registrtion to ", to)
+
 	fmt.Println("start of mail")
 	m := gomail.NewMessage()
 
@@ -39,7 +44,10 @@ func SendMail(to string) {
 	// Now send E-Mail
 	if err := d.DialAndSend(m); err != nil {
 		fmt.Println(err)
+		log.ErrorLogger.WithFields(logrus.Fields{
+			"error": err.Error(),
+		}).Error("Error while sending mail")
 		panic(err)
 	}
-	fmt.Println("end of mail")
+	log.InfoLogger.WithFields(logrus.Fields{}).Info("Registration mail sent to ", to)
 }

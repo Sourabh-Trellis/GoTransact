@@ -19,7 +19,9 @@ func AuthMiddleware() gin.HandlerFunc {
 				Message: "error",
 				Data:    map[string]interface{}{"data": "unauthorized request"},
 			})
+			c.Abort()
 			return
+
 		}
 
 		user, err := utils.VerifyToken(token)
@@ -29,7 +31,9 @@ func AuthMiddleware() gin.HandlerFunc {
 				Message: "error",
 				Data:    map[string]interface{}{"data": "unauthorized request"},
 			})
+			c.Abort()
 			return
+
 		}
 		fmt.Println("a======================", c.Keys)
 		c.Set("user", user)

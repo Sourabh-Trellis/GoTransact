@@ -1,0 +1,37 @@
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/signUp_handler.go:32",
+  "func": "GoTransact/apps/accounts/handlers.Signup_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Register Request received",
+  "time": "2024-06-19T17:25:29+05:30",
+  "url": "/api/register"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:21",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "Attempted to register with sourabhsd@gmail.com and company Go",
+  "time": "2024-06-19T17:25:29+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:73",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "User created in database sourabhsd@gmail.com and company Go",
+  "time": "2024-06-19T17:25:29+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:20",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Attempted to send mail on registrtion to sourabhsd@gmail.com",
+  "time": "2024-06-19T17:25:29+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:52",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Registration mail sent to sourabhsd@gmail.com",
+  "time": "2024-06-19T17:25:32+05:30"
+}
