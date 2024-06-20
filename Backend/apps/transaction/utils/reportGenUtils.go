@@ -24,27 +24,27 @@ func GenerateExcel(transactions []transactionmodels.TransactionRequest) (string,
 	sheetName := "Transactions"
 	index := f.NewSheet(sheetName)
 
-	f.SetCellValue(sheetName, "A1", "ID")
-	f.SetCellValue(sheetName, "B1", "InternalID")
-	f.SetCellValue(sheetName, "C1", "UserID")
+	// f.SetCellValue(sheetName, "A1", "ID")
+	f.SetCellValue(sheetName, "B1", "Transaction ID")
+	// f.SetCellValue(sheetName, "C1", "UserID")
 	f.SetCellValue(sheetName, "D1", "Status")
-	f.SetCellValue(sheetName, "E1", "PaymentGatewayID")
+	// f.SetCellValue(sheetName, "E1", "PaymentGatewayID")
 	f.SetCellValue(sheetName, "F1", "Description")
-	f.SetCellValue(sheetName, "G1", "Amount")
-	f.SetCellValue(sheetName, "H1", "CreatedAt")
-	f.SetCellValue(sheetName, "I1", "UpdatedAt")
+	f.SetCellValue(sheetName, "G1", "Transaction Amount")
+	f.SetCellValue(sheetName, "H1", "Transaction date")
+	// f.SetCellValue(sheetName, "I1", "UpdatedAt")
 
 	for i, tr := range transactions {
 		row := i + 2
-		f.SetCellValue(sheetName, fmt.Sprintf("A%d", row), tr.ID)
+		// f.SetCellValue(sheetName, fmt.Sprintf("A%d", row), tr.ID)
 		f.SetCellValue(sheetName, fmt.Sprintf("B%d", row), tr.Internal_id)
-		f.SetCellValue(sheetName, fmt.Sprintf("C%d", row), tr.UserID)
+		// f.SetCellValue(sheetName, fmt.Sprintf("C%d", row), tr.UserID)
 		f.SetCellValue(sheetName, fmt.Sprintf("D%d", row), tr.Status)
-		f.SetCellValue(sheetName, fmt.Sprintf("E%d", row), tr.Payment_Gateway_id)
+		// f.SetCellValue(sheetName, fmt.Sprintf("E%d", row), tr.Payment_Gateway_id)
 		f.SetCellValue(sheetName, fmt.Sprintf("F%d", row), tr.Description)
 		f.SetCellValue(sheetName, fmt.Sprintf("G%d", row), tr.Amount)
 		f.SetCellValue(sheetName, fmt.Sprintf("H%d", row), tr.CreatedAt)
-		f.SetCellValue(sheetName, fmt.Sprintf("I%d", row), tr.UpdatedAt)
+		// f.SetCellValue(sheetName, fmt.Sprintf("I%d", row), tr.UpdatedAt)
 	}
 
 	f.SetActiveSheet(index)

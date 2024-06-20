@@ -35,3 +35,1009 @@
   "msg": "Registration mail sent to sourabhsd@gmail.com",
   "time": "2024-06-19T17:25:32+05:30"
 }
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/signUp_handler.go:32",
+  "func": "GoTransact/apps/accounts/handlers.Signup_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Register Request received",
+  "time": "2024-06-20T12:57:57+05:30",
+  "url": "/api/register"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:21",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "Attempted to register with sourabhsd@gmail.com and company Go",
+  "time": "2024-06-20T12:57:57+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:73",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "User created in database sourabhsd@gmail.com and company Go",
+  "time": "2024-06-20T12:57:57+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:20",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Attempted to send mail on registrtion to sourabhsd@gmail.com",
+  "time": "2024-06-20T12:57:57+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:52",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Registration mail sent to sourabhsd@gmail.com",
+  "time": "2024-06-20T12:58:01+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T12:58:05+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd@gmail.com",
+  "time": "2024-06-20T12:58:05+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd@gmail.com and id 8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "time": "2024-06-20T12:58:05+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T12:58:55+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd@gmail.com id 8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "time": "2024-06-20T12:58:55+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd@gmail.com id 8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "time": "2024-06-20T12:58:55+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd@gmail.com id 8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "time": "2024-06-20T12:58:55+05:30"
+}
+{
+  "email": "sourabhsd@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T12:58:55+05:30"
+}
+{
+  "email": "sourabhsd@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "8ac87b45-6a97-4518-9cc0-9c93c0dc0275",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T12:58:59+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/signUp_handler.go:32",
+  "func": "GoTransact/apps/accounts/handlers.Signup_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Register Request received",
+  "time": "2024-06-20T13:01:15+05:30",
+  "url": "/api/register"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:21",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "Attempted to register with sourabhsd87@gmail.com and company Go",
+  "time": "2024-06-20T13:01:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/signup.go:73",
+  "func": "GoTransact/apps/accounts/functions.Signup",
+  "level": "info",
+  "msg": "User created in database sourabhsd87@gmail.com and company Go",
+  "time": "2024-06-20T13:01:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:20",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Attempted to send mail on registrtion to sourabhsd87@gmail.com",
+  "time": "2024-06-20T13:01:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/utils/utils.go:52",
+  "func": "GoTransact/apps/accounts/utils.SendMail",
+  "level": "info",
+  "msg": "Registration mail sent to sourabhsd87@gmail.com",
+  "time": "2024-06-20T13:01:19+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T13:01:27+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T13:01:27+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T13:01:27+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T13:01:42+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T13:01:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T13:01:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T13:01:42+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T13:01:42+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T13:01:46+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:04:09+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:04:09+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:04:09+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:04:46+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:04:46+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:04:46+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:04:46+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:04:46+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:04:52+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:08:11+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:08:11+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:08:11+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:08:50+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:08:50+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:08:50+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:08:50+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:08:50+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:08:53+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:19",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:09:01+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=69212880-616b-4baf-a45d-77521a634e1f"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:09:01+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:09:01+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:09:01+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:19",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:10:42+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=69212880-616b-4baf-a45d-77521a634e1f"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:19",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:10:43+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=69212880-616b-4baf-a45d-77521a634e1f"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:19",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:10:44+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=69212880-616b-4baf-a45d-77521a634e1f"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:44+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:44+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=69212880-616b-4baf-a45d-77521a634e1f",
+  "time": "2024-06-20T14:10:44+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:10:58+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:10:58+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:10:58+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:11:43+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:11:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:11:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:12:03+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:12:03+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:12:03+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:12:03+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:12:03+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:12:06+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:19",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:12:15+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=86051854-f0a7-414d-ba62-42d14568b200"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=86051854-f0a7-414d-ba62-42d14568b200",
+  "time": "2024-06-20T14:12:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=86051854-f0a7-414d-ba62-42d14568b200",
+  "time": "2024-06-20T14:12:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=86051854-f0a7-414d-ba62-42d14568b200",
+  "time": "2024-06-20T14:12:15+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:15:03+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:15:03+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:15:03+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:15:26+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:15:26+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:15:26+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:15:26+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:15:26+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:15:30+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:20",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:16:11+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=3274f4b5-b92f-41fb-b2a8-a4a8d3d4bae0"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=3274f4b5-b92f-41fb-b2a8-a4a8d3d4bae0",
+  "time": "2024-06-20T14:16:11+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=3274f4b5-b92f-41fb-b2a8-a4a8d3d4bae0",
+  "time": "2024-06-20T14:16:11+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=3274f4b5-b92f-41fb-b2a8-a4a8d3d4bae0",
+  "time": "2024-06-20T14:16:11+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:17:39+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:17:39+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:17:39+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:18:06+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:18:06+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:18:06+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:18:06+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:18:06+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:18:09+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:20",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:18:20+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=0f95fc86-8f17-4aae-9d29-9b30be30b1aa"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=0f95fc86-8f17-4aae-9d29-9b30be30b1aa",
+  "time": "2024-06-20T14:18:20+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=0f95fc86-8f17-4aae-9d29-9b30be30b1aa",
+  "time": "2024-06-20T14:18:20+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=0f95fc86-8f17-4aae-9d29-9b30be30b1aa",
+  "time": "2024-06-20T14:18:20+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:21:43+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:21:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:21:43+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:22:06+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:22:06+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:22:06+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:22:06+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:22:06+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:22:09+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:20",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:22:16+05:30",
+  "url": "/api/confirm-payment?status=false\u0026transaction_id=dea160ed-1c89-4a19-86f7-5a56da3e21c3"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=dea160ed-1c89-4a19-86f7-5a56da3e21c3",
+  "time": "2024-06-20T14:22:16+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:57",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment canceled transaction-id=dea160ed-1c89-4a19-86f7-5a56da3e21c3",
+  "time": "2024-06-20T14:22:16+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=dea160ed-1c89-4a19-86f7-5a56da3e21c3",
+  "time": "2024-06-20T14:22:16+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/handlers/login_handler.go:30",
+  "func": "GoTransact/apps/accounts/handlers.Login_handler",
+  "level": "info",
+  "method": "POST",
+  "msg": "Login Request received",
+  "time": "2024-06-20T14:25:17+05:30",
+  "url": "/api/login"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:17",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "Attempted to login with sourabhsd87@gmail.com",
+  "time": "2024-06-20T14:25:17+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/accounts/functions/login.go:46",
+  "func": "GoTransact/apps/accounts/functions.Login",
+  "level": "info",
+  "msg": "User logged in with sourabhsd87@gmail.com and id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:25:17+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/paymentRequest_handler.go:28",
+  "func": "GoTransact/apps/transaction/handlers.PaymentRequest",
+  "level": "info",
+  "method": "POST",
+  "msg": "Post Payment Request received",
+  "time": "2024-06-20T14:25:50+05:30",
+  "url": "/api/protected/post-payment"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:19",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Attempted to create transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:25:50+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:53",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "created record in transaction request with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:25:50+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/postPayment.go:69",
+  "func": "GoTransact/apps/transaction/functions.PostPayment",
+  "level": "info",
+  "msg": "Created record in transaction history with email sourabhsd87@gmail.com id 11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "time": "2024-06-20T14:25:50+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:33",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "Attempted to send confirm payment mail",
+  "time": "2024-06-20T14:25:50+05:30"
+}
+{
+  "email": "sourabhsd87@gmail.com",
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/utils/utils.go:104",
+  "func": "GoTransact/apps/transaction/utils.SendMail",
+  "id": "11289cc5-df6f-4e43-834f-499b6638d5b4",
+  "level": "info",
+  "msg": "comfirmation mail sent",
+  "time": "2024-06-20T14:25:53+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:20",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-20T14:26:39+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=1a140927-9f0f-45ea-92d1-f12260d6ae63"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=1a140927-9f0f-45ea-92d1-f12260d6ae63",
+  "time": "2024-06-20T14:26:39+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=1a140927-9f0f-45ea-92d1-f12260d6ae63",
+  "time": "2024-06-20T14:26:39+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=1a140927-9f0f-45ea-92d1-f12260d6ae63",
+  "time": "2024-06-20T14:26:39+05:30"
+}

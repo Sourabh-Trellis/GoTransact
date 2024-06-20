@@ -69,8 +69,8 @@ func ConfirmPayment(transactionIdStr, statusStr string) (int, string, map[string
 	}
 	log.InfoLogger.WithFields(logrus.Fields{}).Info("transaction history updated to confirm/cancel transaction-id=", transactionRequest.Internal_id)
 	if strings.EqualFold(statusStr, "true") {
-		return http.StatusOK, "Transaction successfull", map[string]interface{}{}
+		return http.StatusOK, "Transaction successful", map[string]interface{}{"Amount":transactionRequest.Amount}
 	} else {
-		return http.StatusOK, "Transaction Canceled", map[string]interface{}{}
+		return http.StatusOK, "Transaction Canceled", map[string]interface{}{"Amount":transactionRequest.Amount}
 	}
 }

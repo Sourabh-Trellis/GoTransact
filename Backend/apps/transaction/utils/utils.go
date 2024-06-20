@@ -54,13 +54,13 @@ func SendMail(user accountmodels.User, request transactionmodels.TransactionRequ
 	// Create a buffer to hold the executed template
 	var body bytes.Buffer
 
-	baseURL := "http://localhost:8080/protected/api/confirm-payment" // Replace with your actual domain and endpoint
+	baseURL := "http://localhost:8080/api/confirm-payment" // Replace with your actual domain and endpoint
 	params := url.Values{}
 	params.Add("transaction_id", request.Internal_id.String())
 	params.Add("status", "true")
 	ConfirmActionURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
 
-	baseURL = "http://localhost:8080/protected/api/confirm-payment" // Replace with your actual domain and endpoint
+	baseURL = "http://localhost:8080/api/confirm-payment" // Replace with your actual domain and endpoint
 	params = url.Values{}
 	params.Add("transaction_id", request.Internal_id.String())
 	params.Add("status", "false")

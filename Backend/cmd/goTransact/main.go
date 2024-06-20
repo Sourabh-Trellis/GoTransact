@@ -58,20 +58,8 @@ func main() {
 	})
 	c.Start()
 
-	r := router.Router()
-	// r := gin.Default()
-	// // docs.SwaggerInfo.BasePath = "/api"
+	r := router.Router2()
 
-	// r.POST("/api/register", account.Signup_handler)
-	// r.POST("/api/login", account.Login_handler)
-	// r.GET("/api/confirm-payment", transaction.ConfirmPayment)
-
-	// protected := r.Group("/api/protected")
-	// protected.Use(middlewares.AuthMiddleware())
-	// {
-	// 	protected.POST("/post-payment", transaction.PaymentRequest)
-	// 	protected.POST("/logout", account.LogoutHandler)
-	// }
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.Run(":8080")
 
