@@ -22,7 +22,7 @@ var (
 // LogoutHandler handles user logout
 // @Summary Log out a user
 // @Description Logs out a user by invalidating their token
-// @Tags Account
+// @Tags Auth
 // @Accept json
 // @Produce json
 // @Param Authorization header string true "Bearer token"

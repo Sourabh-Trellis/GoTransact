@@ -102,7 +102,7 @@ paths:
             $ref: '#/definitions/models.Response'
       summary: Login
       tags:
-      - Account
+      - Auth
   /logout:
     post:
       consumes:
@@ -133,39 +133,7 @@ paths:
       - ApiKeyAuth: []
       summary: Log out a user
       tags:
-      - Account
-  /payment:
-    post:
-      consumes:
-      - application/json
-      description: Create a new payment request with the provided details
-      parameters:
-      - description: Payment Request Input
-        in: body
-        name: paymentInput
-        required: true
-        schema:
-          $ref: '#/definitions/utils.PostPaymentInput'
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: Successfully created payment request
-          schema:
-            $ref: '#/definitions/models.Response'
-        "400":
-          description: Invalid input
-          schema:
-            $ref: '#/definitions/models.Response'
-        "500":
-          description: Internal server error
-          schema:
-            $ref: '#/definitions/models.Response'
-      security:
-      - ApiKeyAuth: []
-      summary: Create a new payment request
-      tags:
-      - Transactions
+      - Auth
   /protected/confirm-payment:
     get:
       consumes:
@@ -200,6 +168,43 @@ paths:
       summary: Confirm a payment
       tags:
       - Transactions
+  /protected/post-payment:
+    post:
+      consumes:
+      - application/json
+      description: Create a new payment request with the provided details
+      parameters:
+      - description: Authorization header with bearer token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Payment Request Input
+        in: body
+        name: paymentInput
+        required: true
+        schema:
+          $ref: '#/definitions/utils.PostPaymentInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successfully created payment request
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/models.Response'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/models.Response'
+      security:
+      - ApiKeyAuth: []
+      summary: Create a new payment request
+      tags:
+      - Transactions
   /register:
     post:
       consumes:
@@ -229,5 +234,5 @@ paths:
             $ref: '#/definitions/models.Response'
       summary: Register a new user
       tags:
-      - Account
+      - Auth
 swagger: "2.0"

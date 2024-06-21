@@ -1041,3 +1041,33 @@
   "msg": "transaction history updated to confirm/cancel transaction-id=1a140927-9f0f-45ea-92d1-f12260d6ae63",
   "time": "2024-06-20T14:26:39+05:30"
 }
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/handlers/confirmPayment_handler.go:32",
+  "func": "GoTransact/apps/transaction/handlers.ConfirmPayment",
+  "level": "info",
+  "method": "GET",
+  "msg": "confirm payment Request received",
+  "time": "2024-06-21T19:32:42+05:30",
+  "url": "/api/confirm-payment?status=true\u0026transaction_id=7043a7ac-70ef-4109-8725-d5596d64610e"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:20",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Attempted to confirm/cancel payment transaction-id=7043a7ac-70ef-4109-8725-d5596d64610e",
+  "time": "2024-06-21T19:32:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:45",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "Payment completed transaction-id=7043a7ac-70ef-4109-8725-d5596d64610e",
+  "time": "2024-06-21T19:32:42+05:30"
+}
+{
+  "file": "/home/trellis/Sourabh/GoTransact/Backend/apps/transaction/functions/confirmPayment.go:70",
+  "func": "GoTransact/apps/transaction/functions.ConfirmPayment",
+  "level": "info",
+  "msg": "transaction history updated to confirm/cancel transaction-id=7043a7ac-70ef-4109-8725-d5596d64610e",
+  "time": "2024-06-21T19:32:43+05:30"
+}

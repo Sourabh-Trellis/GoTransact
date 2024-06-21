@@ -13,7 +13,7 @@ import (
 // @BasePath /api
 // @Summary 			Login
 // @Description 		User login
-// @Tags 				Account
+// @Tags 				Auth
 // @Accept 				json
 // @Produce 			json
 // @Param 				loginInput body   utils.LoginInput true "Login input"

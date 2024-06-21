@@ -18,12 +18,13 @@ import (
 // @Tags Transactions
 // @Accept json
 // @Produce json
+// @Param Authorization header string true "Authorization header with bearer token"
 // @Param paymentInput body utils.PostPaymentInput true "Payment Request Input"
 // @Success 200 {object} basemodels.Response "Successfully created payment request"
 // @Failure 400 {object} basemodels.Response "Invalid input"
 // @Failure 500 {object} basemodels.Response "Internal server error"
 // @Security ApiKeyAuth
-// @Router /payment [post]
+// @Router /protected/post-payment [post]
 func PaymentRequest(c *gin.Context) {
 
 	log.InfoLogger.WithFields(logrus.Fields{

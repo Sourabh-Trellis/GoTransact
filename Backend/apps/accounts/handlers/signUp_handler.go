@@ -16,7 +16,7 @@ import (
 // Signup_handler handles user registration
 // @Summary Register a new user
 // @Description Register a new user with email, password, etc.
-// @Tags Account
+// @Tags Auth
 // @Accept json
 // @Produce json
 // @Param 			registerInput body    	utils.RegisterInput true "User Registration Input"
