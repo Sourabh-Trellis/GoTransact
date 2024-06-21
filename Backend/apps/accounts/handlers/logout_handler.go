@@ -19,7 +19,18 @@ var (
 		Addr: "localhost:6379", // Redis server address
 	})
 )
-
+// LogoutHandler handles user logout
+// @Summary Log out a user
+// @Description Logs out a user by invalidating their token
+// @Tags Account
+// @Accept json
+// @Produce json
+// @Param Authorization header string true "Bearer token"
+// @Success 200 {object} basemodels.Response "Logged out successfully"
+// @Failure 401 {object} basemodels.Response "Unauthorized"
+// @Failure 500 {object} basemodels.Response "Internal server error"
+// @Router /logout [post]
+// @Security ApiKeyAuth
 func LogoutHandler(c *gin.Context) {
 
 	log.InfoLogger.WithFields(logrus.Fields{

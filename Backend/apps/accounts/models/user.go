@@ -10,10 +10,10 @@ import (
 type User struct {
 	gorm.Model
 	base.Base
-	FirstName          string                    `gorm:"size:255"`
-	LastName           string                    `gorm:"size:255"`
-	Email              string                    `gorm:"size:255;unique" `
-	Password           string                    `gorm:"size:255"`
-	Company            Company                   `gorm:"foreignKey:UserID"`
+	FirstName          string                    `json:"firstname" gorm:"size:255"`
+	LastName           string                    `json:"lastname" gorm:"size:255"`
+	Email              string                    `json:"email" gorm:"size:255;unique" `
+	Password           string                    `json:"password" gorm:"size:255"`
+	Company            Company                   `json:"company" gorm:"foreignKey:UserID"`
 	TransactionRequest models.TransactionRequest `gorm:"foreignKey:UserID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }

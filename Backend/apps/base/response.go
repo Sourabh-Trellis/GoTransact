@@ -1,7 +1,7 @@
 package models
 
 type Response struct {
-	Status  int
-	Message string
-	Data    map[string]interface{}
+	Status  int                    `json:"status"`
+	Message string                 `json:"messsage"`
+	Data    map[string]interface{} `json:"data"`
 }

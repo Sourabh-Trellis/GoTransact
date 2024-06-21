@@ -12,6 +12,19 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+// @BasePath /api
+// ConfirmPayment godoc
+// @Summary Confirm a payment
+// @Description Confirm payment by transaction ID and status
+// @Tags Transactions
+// @Accept json
+// @Produce json
+// @Param transaction_id query string true "Transaction ID"
+// @Param status query string true "Status"
+// @Success 200 {object} basemodels.Response
+// @Failure 400 {object} basemodels.Response
+// @Failure 500 {object} basemodels.Response
+// @Router /protected/confirm-payment [get]
 func ConfirmPayment(c *gin.Context) {
 
 	log.InfoLogger.WithFields(logrus.Fields{

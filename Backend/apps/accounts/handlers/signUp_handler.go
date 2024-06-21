@@ -12,11 +12,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
-
+// @BasePath /api
 // Signup_handler handles user registration
 // @Summary Register a new user
 // @Description Register a new user with email, password, etc.
-// @Tags Accounts
+// @Tags Account
 // @Accept json
 // @Produce json
 // @Param 			registerInput body    	utils.RegisterInput true "User Registration Input"

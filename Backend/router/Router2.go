@@ -3,7 +3,7 @@ package router
 import (
 	account "GoTransact/apps/accounts/handlers"
 	transaction "GoTransact/apps/transaction/handlers"
-	docs "GoTransact/cmd/goTransact/docs"
+	docs "GoTransact/docs"
 	"GoTransact/middlewares"
 
 	"github.com/gin-gonic/gin"

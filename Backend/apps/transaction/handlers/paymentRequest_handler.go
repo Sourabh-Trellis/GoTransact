@@ -12,14 +12,18 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// type PostPaymentInput struct {
-// 	CardNumber  string `json:"cardnumber" binding:"required" validate:"card_number" `
-// 	ExpiryDate  string `json:"expirydate" binding:"required" validate:"expiry_date" `
-// 	Cvv         string `json:"cvv" validate:"cvv" binding:"required"`
-// 	Amount      string `json:"amount" binding:"required" validate:"amount"`
-// 	Description string `json:"description" `
-// }
-
+// PaymentRequest handles the payment request
+// @Summary Create a new payment request
+// @Description Create a new payment request with the provided details
+// @Tags Transactions
+// @Accept json
+// @Produce json
+// @Param paymentInput body utils.PostPaymentInput true "Payment Request Input"
+// @Success 200 {object} basemodels.Response "Successfully created payment request"
+// @Failure 400 {object} basemodels.Response "Invalid input"
+// @Failure 500 {object} basemodels.Response "Internal server error"
+// @Security ApiKeyAuth
+// @Router /payment [post]
 func PaymentRequest(c *gin.Context) {
 
 	log.InfoLogger.WithFields(logrus.Fields{

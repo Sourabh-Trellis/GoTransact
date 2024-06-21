@@ -18,11 +18,10 @@ const (
 type TransactionRequest struct {
 	gorm.Model
 	base.Base
-	UserID uint   `gorm:""`
-	// User                   User              `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
-	Status             TransactionStatus  `gorm:"type:varchar(20);not null;default:'pending'"`
-	Payment_Gateway_id uint               `gorm:""`
-	Description        string             `gorm:"size:255"`
-	Amount             float64            `gorm:"type:float"`
+	UserID             uint               `json:"user_id" gorm:""`
+	Status             TransactionStatus  `json:"status" gorm:"type:varchar(20);not null;default:'pending'"`
+	Payment_Gateway_id uint               `json:"payment_gateway_id" gorm:""`
+	Description        string             `json:"description" gorm:"size:255"`
+	Amount             float64            `json:"amount" gorm:"type:float"`
 	TransactionHistory TransactionHistory `gorm:"foreignKey:TransactionID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }

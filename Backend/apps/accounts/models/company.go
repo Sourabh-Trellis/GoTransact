@@ -1,12 +1,15 @@
 package models
 
-import "gorm.io/gorm"
-import base "GoTransact/apps/base"
+import (
+	base "GoTransact/apps/base"
+
+	"gorm.io/gorm"
+)
 
 type Company struct {
 	gorm.Model
-	base.Base   
-	Name   string `gorm:"size:255"`
-	UserID int    `gorm:"unique"`
+	base.Base
+	Name   string `json:"name" gorm:"size:255"`
+	UserID int    `json:"userid" gorm:"unique"`
 	// User User `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL"`
 }

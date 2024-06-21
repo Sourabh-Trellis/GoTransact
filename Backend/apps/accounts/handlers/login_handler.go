@@ -10,10 +10,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
-
+// @BasePath /api
 // @Summary 			Login
 // @Description 		User login
-// @Tags 				login
+// @Tags 				Account
 // @Accept 				json
 // @Produce 			json
 // @Param 				loginInput body   utils.LoginInput true "Login input"
