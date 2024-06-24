@@ -29,10 +29,7 @@ func expiryDateValidator(fl validator.FieldLevel) bool {
 	}
 	currentYear := time.Now().Year() % 100
 	expiryYear := t.Year() % 100
-	if expiryYear < currentYear || expiryYear > currentYear+10 {
-		return false
-	}
-	return true
+	return expiryYear >= currentYear
 }
 
 func cvvValidator(fl validator.FieldLevel) bool {

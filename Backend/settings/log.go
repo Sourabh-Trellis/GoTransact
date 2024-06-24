@@ -14,7 +14,7 @@ var (
 func Init() {
 	// Create the info logger
 	InfoLogger = logrus.New()
-	infoFile, err := os.OpenFile("../../pkg/logger/infolog.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	infoFile, err := os.OpenFile("./pkg/logger/infolog.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err == nil {
 		InfoLogger.Out = infoFile
 	} else {
@@ -23,7 +23,7 @@ func Init() {
 
 	// Create the error logger
 	ErrorLogger = logrus.New()
-	errorFile, err := os.OpenFile("../../pkg/logger/errorlog.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	errorFile, err := os.OpenFile("./pkg/logger/errorlog.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err == nil {
 		ErrorLogger.Out = errorFile
 	} else {
