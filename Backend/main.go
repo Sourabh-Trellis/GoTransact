@@ -3,10 +3,10 @@ package main
 //go:generate swagger generate spec -o docs/swagger.json
 import (
 	accountModels "GoTransact/apps/accounts/models"
-	accountValidator "GoTransact/apps/accounts/validators"
 	transactionModels "GoTransact/apps/transaction/models"
-	"GoTransact/apps/transaction/utils"
-	transactionValidator "GoTransact/apps/transaction/validators"
+
+	accountsUtils "GoTransact/apps/accounts"
+	transactionUtils "GoTransact/apps/transaction"
 
 	"GoTransact/config"
 	db "GoTransact/pkg/db"
@@ -14,7 +14,6 @@ import (
 	"log"
 
 	// log "GoTransact/pkg/log"
-	logger "GoTransact/settings"
 
 	_ "GoTransact/docs"
 
@@ -41,20 +40,22 @@ import (
 func main() {
 	config.LoadEnv()
 	db.InitDB("prod")
-	accountValidator.Init()
-	transactionValidator.InitValidation()
-	logger.Init()
+	accountsUtils.InitValidation()
+	transactionUtils.InitValidation()
+	accountsUtils.AccountLogInit()
+	transactionUtils.TransactionLogInit()
 
+	
 	db.DB.AutoMigrate(&accountModels.User{}, &accountModels.Company{}, &transactionModels.Payment_Gateway{}, &transactionModels.TransactionRequest{}, &transactionModels.TransactionHistory{})
 
 	c := cron.New()
 	c.AddFunc("@every 24h", func() {
-		transactions := utils.FetchTransactionsLast24Hours()
-		filePath, err := utils.GenerateExcel(transactions)
+		transactions := transactionUtils.FetchTransactionsLast24Hours()
+		filePath, err := transactionUtils.GenerateExcel(transactions)
 		if err != nil {
 			log.Fatalf("failed to generate excel: %v", err)
 		}
-		utils.SendMailWithAttachment("sourabhsd87@gmail.com", filePath)
+		transactionUtils.SendMailWithAttachment("sourabhsd87@gmail.com", filePath)
 	})
 	c.Start()
 

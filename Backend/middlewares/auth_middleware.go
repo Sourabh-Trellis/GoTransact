@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"GoTransact/apps/accounts/utils"
+	"GoTransact/apps/accounts"
 	models "GoTransact/apps/base"
 	"fmt"
 	"net/http"

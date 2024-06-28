@@ -73,6 +73,40 @@ info:
   title: GoTransact
   version: "1.0"
 paths:
+  /confirm-payment:
+    get:
+      consumes:
+      - application/json
+      description: Confirm payment by transaction ID and status
+      parameters:
+      - description: Transaction ID
+        in: query
+        name: transaction_id
+        required: true
+        type: string
+      - description: Status
+        in: query
+        name: status
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Confirm a payment
+      tags:
+      - Transactions
   /login:
     post:
       consumes:
@@ -134,40 +168,6 @@ paths:
       summary: Log out a user
       tags:
       - Auth
-  /protected/confirm-payment:
-    get:
-      consumes:
-      - application/json
-      description: Confirm payment by transaction ID and status
-      parameters:
-      - description: Transaction ID
-        in: query
-        name: transaction_id
-        required: true
-        type: string
-      - description: Status
-        in: query
-        name: status
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/models.Response'
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/models.Response'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/models.Response'
-      summary: Confirm a payment
-      tags:
-      - Transactions
   /protected/post-payment:
     post:
       consumes:

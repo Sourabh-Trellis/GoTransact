@@ -3,10 +3,10 @@ package test
 import (
 	accountmodels "GoTransact/apps/accounts/models"
 	// "GoTransact/apps/accounts/validators"
-	"GoTransact/apps/transaction/functions"
+	utils "GoTransact/apps/transaction"
+
 	transactionmodels "GoTransact/apps/transaction/models"
-	"GoTransact/apps/transaction/utils"
-	"GoTransact/apps/transaction/validators"
+
 	"GoTransact/pkg/db"
 	"net/http"
 	"testing"
@@ -17,7 +17,7 @@ import (
 func TestPostPayment_InvalidAmount(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -42,7 +42,7 @@ func TestPostPayment_InvalidAmount(t *testing.T) {
 		Amount:      "invalid_amount", // Invalid amount
 	}
 
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Contains(t, message, "error while validating")
@@ -54,7 +54,7 @@ func TestPostPayment_InvalidAmount(t *testing.T) {
 func TestPostPayment_InvalidCVV(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -76,10 +76,10 @@ func TestPostPayment_InvalidCVV(t *testing.T) {
 		ExpiryDate:  "06/27",
 		Cvv:         "1473",
 		Description: "Test payment",
-		Amount:      "74537.6", 
+		Amount:      "74537.6",
 	}
 
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Contains(t, message, "error while validating")
@@ -91,7 +91,7 @@ func TestPostPayment_InvalidCVV(t *testing.T) {
 func TestPostPayment_Invalid_ExpDate(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -113,10 +113,10 @@ func TestPostPayment_Invalid_ExpDate(t *testing.T) {
 		ExpiryDate:  "06/21",
 		Cvv:         "147",
 		Description: "Test payment",
-		Amount:      "6465.6", 
+		Amount:      "6465.6",
 	}
 
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Contains(t, message, "error while validating")
@@ -128,7 +128,7 @@ func TestPostPayment_Invalid_ExpDate(t *testing.T) {
 func TestPostPayment_Invalid_CardNumber(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -150,10 +150,10 @@ func TestPostPayment_Invalid_CardNumber(t *testing.T) {
 		ExpiryDate:  "06/27",
 		Cvv:         "147",
 		Description: "Test payment",
-		Amount:      "6343.6", 
+		Amount:      "6343.6",
 	}
 
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Contains(t, message, "error while validating")
@@ -166,7 +166,7 @@ func TestPostPayment_Invalid_CardNumber(t *testing.T) {
 func TestPostPayment_InvalidPaymentType(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -190,8 +190,7 @@ func TestPostPayment_InvalidPaymentType(t *testing.T) {
 		Amount:      "1653.55",
 	}
 
-
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "invalid payment type", message)
@@ -204,7 +203,7 @@ func TestPostPayment_InvalidPaymentType(t *testing.T) {
 func TestPostPayment_Success(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	validators.InitValidation()
+	utils.InitValidation()
 
 	// Create a mock user
 	user := accountmodels.User{
@@ -227,10 +226,10 @@ func TestPostPayment_Success(t *testing.T) {
 		ExpiryDate:  "06/26",
 		Cvv:         "147",
 		Description: "Test payment",
-		Amount:      "6465.63", 
+		Amount:      "6465.63",
 	}
 
-	status, message, data := functions.PostPayment(postPaymentInput, user)
+	status, message, data := utils.PostPayment(postPaymentInput, user)
 
 	assert.Equal(t, http.StatusOK, status)
 	assert.Equal(t, "success", message)

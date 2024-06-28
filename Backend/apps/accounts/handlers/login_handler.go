@@ -1,15 +1,16 @@
 package handlers
 
 import (
-	"GoTransact/apps/accounts/functions"
-	"GoTransact/apps/accounts/utils"
+	// "GoTransact/apps/accounts/functions"
+	// "GoTransact/apps/accounts/utils"
+	utils "GoTransact/apps/accounts"
 	basemodels "GoTransact/apps/base"
-	log "GoTransact/settings"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
+
 // @BasePath /api
 // @Summary 			Login
 // @Description 		User login
@@ -24,7 +25,7 @@ import (
 // @Router 				/login [post]
 func Login_handler(c *gin.Context) {
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		"method": c.Request.Method,
 		"url":    c.Request.URL.String(),
 	}).Info("Login Request received")
@@ -40,7 +41,7 @@ func Login_handler(c *gin.Context) {
 		return
 	}
 
-	status, message, data := functions.Login(loginInput)
+	status, message, data := utils.Login(loginInput)
 
 	c.JSON(status, basemodels.Response{
 		Status:  status,

@@ -1,9 +1,8 @@
 package handlers
 
 import (
-	"GoTransact/apps/accounts/utils"
+	utils "GoTransact/apps/accounts"
 	basemodels "GoTransact/apps/base"
-	log "GoTransact/settings"
 	"net/http"
 	"time"
 
@@ -19,6 +18,7 @@ var (
 		Addr: "localhost:6379", // Redis server address
 	})
 )
+
 // LogoutHandler handles user logout
 // @Summary Log out a user
 // @Description Logs out a user by invalidating their token
@@ -33,7 +33,7 @@ var (
 // @Security ApiKeyAuth
 func LogoutHandler(c *gin.Context) {
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		"method": c.Request.Method,
 		"url":    c.Request.URL.String(),
 	}).Info("Attempted to logout")
@@ -73,7 +73,7 @@ func LogoutHandler(c *gin.Context) {
 		return
 	}
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		// "method": c.Request.Method,
 		// "url":    c.Request.URL.String(),
 	}).Info("Logged out successfully")

@@ -3,7 +3,7 @@ package test
 import (
 	accountmodels "GoTransact/apps/accounts/models"
 	models "GoTransact/apps/base"
-	"GoTransact/apps/transaction/functions"
+	utils "GoTransact/apps/transaction"
 	transactionmodels "GoTransact/apps/transaction/models"
 	"GoTransact/pkg/db"
 	log "GoTransact/settings"
@@ -44,7 +44,7 @@ func TestConfirmPayment_Success(t *testing.T) {
 	}
 	db.DB.Create(&transactionRequest)
 
-	status, message, data := functions.ConfirmPayment(transactionRequest.Internal_id.String(), "true")
+	status, message, data := utils.ConfirmPayment(transactionRequest.Internal_id.String(), "true")
 
 	assert.Equal(t, http.StatusOK, status)
 	assert.Equal(t, "Transaction successfull", message)
@@ -91,7 +91,7 @@ func TestConfirmPayment_Failed(t *testing.T) {
 	}
 	db.DB.Create(&transactionRequest)
 
-	status, message, data := functions.ConfirmPayment(transactionRequest.Internal_id.String(), "false")
+	status, message, data := utils.ConfirmPayment(transactionRequest.Internal_id.String(), "false")
 
 	assert.Equal(t, http.StatusOK, status)
 	assert.Equal(t, "Transaction Canceled", message)
@@ -119,7 +119,7 @@ func TestConfirmPayment_InvalidTransactionID(t *testing.T) {
 	}
 	db.DB.Create(&gateway)
 
-	status, message, data := functions.ConfirmPayment(invalidTransactionID, "true")
+	status, message, data := utils.ConfirmPayment(invalidTransactionID, "true")
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "Invalid transaction ID", message)
@@ -140,7 +140,7 @@ func TestConfirmPayment_TransactionNotFound(t *testing.T) {
 	}
 	db.DB.Create(&gateway)
 
-	status, message, data := functions.ConfirmPayment(validUUID, "true")
+	status, message, data := utils.ConfirmPayment(validUUID, "true")
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "transaction request not found", message)

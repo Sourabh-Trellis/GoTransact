@@ -2,8 +2,8 @@ package handlers
 
 import (
 	basemodels "GoTransact/apps/base"
-	"GoTransact/apps/transaction/functions"
-	log "GoTransact/settings"
+	utils "GoTransact/apps/transaction"
+
 	"fmt"
 	"html/template"
 	"net/http"
@@ -24,10 +24,10 @@ import (
 // @Success 200 {object} basemodels.Response
 // @Failure 400 {object} basemodels.Response
 // @Failure 500 {object} basemodels.Response
-// @Router /protected/confirm-payment [get]
+// @Router /confirm-payment [get]
 func ConfirmPayment(c *gin.Context) {
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		"method": c.Request.Method,
 		"url":    c.Request.URL.String(),
 	}).Info("confirm payment Request received")
@@ -35,7 +35,7 @@ func ConfirmPayment(c *gin.Context) {
 	transactionIdStr := c.Query("transaction_id")
 	statusStr := c.Query("status")
 
-	_, message, data := functions.ConfirmPayment(transactionIdStr, statusStr)
+	_, message, data := utils.ConfirmPayment(transactionIdStr, statusStr)
 
 	// Convert data to map to extract transaction details
 

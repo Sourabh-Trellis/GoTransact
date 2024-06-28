@@ -1,10 +1,11 @@
 package test
 
 import (
-	"GoTransact/apps/accounts/functions"
+	utils "GoTransact/apps/accounts"
+	
 	"GoTransact/apps/accounts/models"
-	"GoTransact/apps/accounts/utils"
-	accountValidator "GoTransact/apps/accounts/validators"
+
+	
 	"GoTransact/pkg/db"
 	log "GoTransact/settings"
 	"fmt"
@@ -18,7 +19,7 @@ func TestLogin_success(t *testing.T) {
 	fmt.Println("---------------------------------------in TestLogin_success")
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 	log.Init()
 	//create a user
 	password, _ := utils.HashPassword("Password@123")
@@ -36,7 +37,7 @@ func TestLogin_success(t *testing.T) {
 		Password: "Password@123",
 	}
 
-	status, message, data := functions.Login(input)
+	status, message, data := utils.Login(input)
 
 	assert.Equal(t, http.StatusOK, status)
 	assert.Equal(t, "Logged in successfull", message)
@@ -48,7 +49,7 @@ func TestLogin_success(t *testing.T) {
 func TestLogin_InvalidEmail(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 	log.Init()
 	password, _ := utils.HashPassword("Password@123")
 	existinguser := models.User{
@@ -66,7 +67,7 @@ func TestLogin_InvalidEmail(t *testing.T) {
 		Password: "Password@123",
 	}
 
-	status, message, data := functions.Login(input)
+	status, message, data := utils.Login(input)
 
 	assert.Equal(t, http.StatusUnauthorized, status)
 	assert.Equal(t, "invalid username or password", message)
@@ -77,7 +78,7 @@ func TestLogin_InvalidEmail(t *testing.T) {
 func TestLogin_InvalidPassword(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 	log.Init()
 	// Create a user
 	password, _ := utils.HashPassword("Password@123")
@@ -95,7 +96,7 @@ func TestLogin_InvalidPassword(t *testing.T) {
 		Password: "WrongPassword@123",
 	}
 
-	status, message, data := functions.Login(input)
+	status, message, data := utils.Login(input)
 
 	assert.Equal(t, http.StatusUnauthorized, status)
 	assert.Equal(t, "invalid username or password", message)

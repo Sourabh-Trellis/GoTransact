@@ -4,14 +4,14 @@ import (
 	"net/http"
 
 	// "GoTransact/apps/accounts/models"
-	"GoTransact/apps/accounts/functions"
-	"GoTransact/apps/accounts/utils"
+
+	utils "GoTransact/apps/accounts"
 	basemodels "GoTransact/apps/base"
-	log "GoTransact/settings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
+
 // @BasePath /api
 // Signup_handler handles user registration
 // @Summary Register a new user
@@ -26,7 +26,7 @@ import (
 // @Router /register [post]
 func Signup_handler(c *gin.Context) {
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		"method": c.Request.Method,
 		"url":    c.Request.URL.String(),
 	}).Info("Register Request received")
@@ -41,7 +41,7 @@ func Signup_handler(c *gin.Context) {
 		return
 	}
 
-	statusCode, message, data := functions.Signup(registerInput)
+	statusCode, message, data := utils.Signup(registerInput)
 
 	c.JSON(statusCode, basemodels.Response{
 		Status:  statusCode,

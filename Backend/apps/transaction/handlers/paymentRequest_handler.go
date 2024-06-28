@@ -3,9 +3,8 @@ package handlers
 import (
 	accountmodels "GoTransact/apps/accounts/models"
 	basemodels "GoTransact/apps/base"
-	"GoTransact/apps/transaction/functions"
-	"GoTransact/apps/transaction/utils"
-	log "GoTransact/settings"
+	utils "GoTransact/apps/transaction"
+
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -27,7 +26,7 @@ import (
 // @Router /protected/post-payment [post]
 func PaymentRequest(c *gin.Context) {
 
-	log.InfoLogger.WithFields(logrus.Fields{
+	utils.InfoLogger.WithFields(logrus.Fields{
 		"method": c.Request.Method,
 		"url":    c.Request.URL.String(),
 	}).Info("Post Payment Request received")
@@ -58,7 +57,7 @@ func PaymentRequest(c *gin.Context) {
 		return
 	}
 
-	status, message, data := functions.PostPayment(Postpaymentinput, user)
+	status, message, data := utils.PostPayment(Postpaymentinput, user)
 
 	c.JSON(status, basemodels.Response{
 		Status:  status,

@@ -1,15 +1,15 @@
 package test
 
 import (
-	"GoTransact/apps/accounts/functions"
+
 	"GoTransact/apps/accounts/models"
 	log "GoTransact/settings"
 
 	// "GoTransact/apps/accounts/models"
-	"GoTransact/apps/accounts/utils"
+	utils "GoTransact/apps/accounts"
 	"GoTransact/pkg/db"
 
-	accountValidator "GoTransact/apps/accounts/validators"
+
 	"net/http"
 	"testing"
 
@@ -19,7 +19,7 @@ import (
 func TestSignup_success(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 	log.Init()
 	input := utils.RegisterInput{
 		FirstName:   "testfirstname",
@@ -29,7 +29,7 @@ func TestSignup_success(t *testing.T) {
 		Password:    "Password@123",
 	}
 
-	status, message, data := functions.Signup(input)
+	status, message, data := utils.Signup(input)
 
 	assert.Equal(t, http.StatusOK, status)
 	assert.Equal(t, "User created successfully", message)
@@ -53,7 +53,7 @@ func TestSignup_success(t *testing.T) {
 func TestSignup_EmailAreadyExist(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 
 	existingUser := models.User{
 		FirstName: "testfirstname",
@@ -74,7 +74,7 @@ func TestSignup_EmailAreadyExist(t *testing.T) {
 		Password:    "Password@123",
 	}
 
-	status, message, data := functions.Signup(input)
+	status, message, data := utils.Signup(input)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "email already exists", message)
@@ -86,7 +86,7 @@ func TestSignup_EmailAreadyExist(t *testing.T) {
 func TestSignup_CompanyAlreadyExist(t *testing.T) {
 	SetupTestDb()
 	ClearDatabase()
-	accountValidator.Init()
+	utils.Init()
 	log.Init()
 	existingUser := models.User{
 		FirstName: "testfirstname",
@@ -107,7 +107,7 @@ func TestSignup_CompanyAlreadyExist(t *testing.T) {
 		Password:    "Password@123",
 	}
 
-	status, message, data := functions.Signup(input)
+	status, message, data := utils.Signup(input)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "company already exists", message)
@@ -128,7 +128,7 @@ func TestSignup_InvaldPassword(t *testing.T) {
 		Password:    "password@123",
 	}
 
-	status, message, data := functions.Signup(input)
+	status, message, data := utils.Signup(input)
 
 	assert.Equal(t, http.StatusBadRequest, status)
 	assert.Equal(t, "Password should contain atleast one upper case character,one lower case character,one number and one special character", message)
